@@ -1,0 +1,31 @@
+<!--
+- JavaScript provides  "location.search" to access and use query string in page.
+- However you need various string handling methods to extract only the value that you need from a string.
+
+        a) slice()                : extracts chars between specified index number
+        b) indexOf()            : returns the index number of a char in string
+location is a javaScript object which access current location means current webpage and 
+search will specify query string in that location which starts from ‘?’
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <script>
+        function bodyload(){
+            
+           /* document.getElementById("lblUser").innerHTML = location.search.slice(location.search.indexOf("=")+1); */
+           str = location.search;
+           equalPosition = str.indexOf("=");
+           document.getElementById("lblUser").innerHTML = str.slice(equalPosition+1);
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <h2>Home</h2>
+    <p>Hello ! <span id="lblUser"></span></p>
+</body>
+</html>

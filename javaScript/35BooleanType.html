@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean</title>
+    <script>
+        function ToggleClick()
+        {
+            var togglebtn = document.getElementById("toggleButton");
+            var img = document.getElementById("preview");
+            togglebtn.innerHTML = (togglebtn.innerHTML=="Show")?"Hide":"Show";
+
+            img.style.display = (img.style.display=="none")?"block": "none";
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <button id="toggleButton" onclick="ToggleClick()">Show</button>
+    </div>
+    <div id="preview" style="display:none; margin-top:20px">
+        <img src=" ../public/assets/azure.jpeg" width="200" height="200">
+    </div>
+</body>
+</html>

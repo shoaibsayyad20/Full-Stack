@@ -1,0 +1,48 @@
+<!--
+CSS Inheritance
+- Inheritance is a mechanism where the parent styles are applied to the child elements.
+- However all parent styles are not adapted by child.
+- You can control the inheritance of parent styles using 3 values.
+        a) inherit        : It inherits the parent style
+        b) initial        : It ignores the parent style
+        c) unset        : It removes the default style
+
+Syntax:
+      child {
+        attribute: initial | inherit;
+      }
+
+     child {
+        all : initial | inherit;
+     }
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 4px double red;
+            color:red;
+            padding: 20px;
+        }
+        h2 {
+            border:inherit;
+            padding: inherit;
+            color:initial;
+            font-weight: unset;
+            font-size: unset;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Container Content
+        <h2>CSS Inheritance</h2>
+    </div>
+</body>
+</html>

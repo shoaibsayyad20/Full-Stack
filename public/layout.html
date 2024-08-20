@@ -1,0 +1,123 @@
+ <!-- Padding is a distance between content and border-->
+ <!-- Margin is a distacne between border and browser's window-->
+ <!-- Grid arrange element in the form of rows and columns-->
+ <!-- grid-template-columns is used for defining content in columns-->
+
+
+<!doctype html>
+<html>
+    <head>
+        <title>Layout</title>
+        <style>
+            header
+            {
+                background-color: tomato;
+                color: white;
+                padding: 15px;                        
+                border: black 2px solid;              
+                border-radius: 5px;
+                text-align: center;
+                font-size: 30px;
+            }
+            footer
+            {
+                background-color: tomato;
+                color: white;
+                padding: 10px;
+                text-align: center;
+                font-size:20px;
+                border: black 2px solid;
+            }
+            section
+            {
+                height: 550px;
+                display: Grid;                              
+                grid-template-columns: 2fr 8fr 2fr;         
+                margin-top: 20px;
+            }
+            nav div
+            {
+               
+                background-color: tomato;
+                color: white;
+                border: 2px solid black;
+                margin-bottom: 10px;
+                padding: 10px;
+                font-size: 20px;
+                border-radius: 5px;
+                width: 150px;
+            }
+            main div
+            {
+                
+                font-size: 40px;
+                text-align: center;
+            }
+            figure
+            {
+                border:2px double black;
+                width: 210px;
+                height: 100px;
+            }
+            article
+            {
+            
+                padding: 5px;
+                width: 200px;
+                margin-left: 400px;
+                font-size: 30px;
+                text-align: center;
+                background-color: darkcyan;
+                color: white;
+            }
+            aside
+            {
+                font-size:15px;
+                border: 3px black dotted;
+                height : 50px;
+                width : 110px;
+                text-align:center;
+            }
+           
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <div>Amazon Shopping</div>
+        </header>
+
+        <section>
+            <nav>
+                <div>Home</div>
+                <div>Electronics</div>
+                <div>Footwear</div>
+                <div>Fashion</div>
+            </nav>
+
+            <main>
+                <div>Welcome to Online Shopping Store</div>
+                <figure>
+                    Your Image
+                    <figcaption>Samsung TV</figcaption>
+                </figure>   
+                <article>
+                    70 % Off on Electronics
+                </article>
+                <dialog>Any Help?</dialog>
+            </main>
+
+            <aside>
+                  Ads here..
+            </aside>
+
+        </section>
+
+        <footer>
+           <div>
+            &copy; copyright 2024
+           </div>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulation</title>
+    <script>
+        function VerifyEmail()
+        {
+            var em = document.getElementById("email").value;
+            var er = document.getElementById("Error");
+            var dotpos = em.lastIndexOf(".");
+            var domain = em.substring(dotpos+1);
+            if(em.indexOf('@')==-1)
+            {
+                document.getElementById("Error").innerHTML = "@ not found".fontcolor('red');
+            }
+            document.getElementById("domain").innerHTML = `Your domain extension is ${domain}`;
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text" id="email" onblur="VerifyEmail()">
+        </dd>
+        <dd id="Error"></dd>
+        <dd id="domain"></dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube</title>
+    <style>
+       
+        .cube
+        {
+            position: relative;
+            border: 2px solid red;
+            height:600px;
+            width: 1000px;
+            padding: 20px 20px 20px 20px;
+        }
+        .cube:hover
+        {
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+        }
+       .back
+       {
+          width: 100px; height: 100px; border: 2px solid black ;
+          transform: translate(900px,361px); 
+          transition: 3s;
+          
+       }
+      
+       .front
+       {
+          width: 100px; height: 100px; border: 2px solid black ;
+          transform: translate(850px,290px);
+       }
+       
+       .right
+       {
+          width: 50px; height: 100px; border: 2px solid black ;
+          transform: translate(950px,170px) skewY(-30deg);
+       }
+       .left
+       {
+          width: 50px; height: 100px; border: 2px solid black;
+          transform: translate(850px,62px) skewY(-30deg);
+       }
+       .top
+       {
+           width: 100px; height: 30px; border: 2px solid black ;
+           transform: translate(872px,-55px) skewX(-60deg);
+       }
+       .bottom
+       {
+        width: 100px; height: 30px; border: 2px solid black ;
+        transform: translate(872px,15px) skewX(-60deg);
+         
+       }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="back"> back</div>
+        <div class="front"></div>
+        <div class="right"></div>
+        <div class="left"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+</body>
+</html>

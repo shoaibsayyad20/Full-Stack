@@ -1,0 +1,42 @@
+<!--
+    1. We can able select one or multiple button at the same time but cannot able to uncheck button. 
+    Every button have unique name and unique value. After selection data is submitted as (name=value).
+    e.g: course=java
+
+    2. Once we apply same name to all radio button then we can only able select only one button at a time.
+       so, multiple selction property is not work after applying same name to all button(mutex).
+
+    3. After applying mutex to radio button, radio button automatically uncheck when we check other radio button.
+    
+    4.If we do not provide value to button then By default radio button submit “on” as value.
+
+-->
+<html lang="en">
+<head>
+    <title>Radio Button</title>
+</head>
+
+<body>
+
+<form>
+    <fieldset>
+        <legend>Choose courses</legend>
+        <div>
+            <input type="radio" name="option" value="Select" checked>Select
+            <br>
+            <input type="radio" name="course" value="java">Java
+            <br>
+            <input type="radio" name="course" value="CPP">CPP
+            <br>
+            <input type="radio" name="course" value="Python">Python
+            <br>
+            <input type="radio" name="course" value="Oracle">Oracle
+            <br>
+            <button>Submit</button>
+        </div>
+    </fieldset>
+</form>
+    
+</body>
+
+</html>

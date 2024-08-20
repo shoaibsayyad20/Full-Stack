@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Format</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+       function ThemeChange()
+       {
+          var box = document.getElementById("bscheckbox");
+          var form = document.querySelector("form");
+          var btn = document.querySelector("button");
+          if(box.checked)
+          {
+             form.className = "bg-dark text-white p-4";
+             btn.className = "btn btn-light w-100";
+          }
+          else
+          {
+            form.className = "";
+            btn.className = "btn btn-dark w-100";
+          }
+       }
+    </script>
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center" style="height:600px">
+        <form>
+          <div class="form-switch">
+            <input type="checkbox" class="form-check-input" id="bscheckbox" onchange="ThemeChange()"> <span class="form-check-label">Dark Theme</span>
+          </div>
+          <dl>
+              <h2>User Login</h2>
+              <dt>User Name</dt>
+              <dd><input type="text" class="form-control"></dd>
+              <dt>Password</dt>
+              <dd><input type="password" class="form-control"></dd>
+          </dl>
+          <button class="btn btn-dark w-100">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

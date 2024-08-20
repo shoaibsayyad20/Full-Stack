@@ -1,0 +1,101 @@
+<!-- 
+    if required satisfied then  #userName:valid+span{}
+ -->
+<html lang="en">
+<head>
+    <title>Dynamic element validation state pseudo classes</title>
+    <style>
+        #UserName:required
+        {
+            border: 2px solid red;
+            box-shadow: 2px 3px 2px red;
+        }
+        #UserName+span
+        {
+            display: none;
+        }
+        #userName:required+span
+        {
+           display: block;
+           color: red;
+        }
+        
+        #userName:valid+span
+        {
+            display:none;
+        }
+        #userName:optional
+        {
+            border: 2px solid gold;
+            box-shadow: 2px 3px 2px gold;
+        }
+        #mob:valid
+        {
+            border: 2px solid green;
+            box-shadow: 2px 3px 2px green;
+        }
+        #mob:invalid
+        {
+            border: 2px solid red;
+            box-shadow: 2px 3px 2px red;
+        }
+        #mob:valid+span
+        {
+            display: none;
+        }
+        #mob:invalid+span
+        {
+            display: block;
+            color: red;
+        }
+        #age:in-range
+        {
+            border: 2px solid green;
+            box-shadow: 2px 3px 2px green;
+        }
+        #age:out-of-range
+        {
+            border:2px solid red;
+            box-shadow:2px 3px 2px red;
+        }
+        #age:in-range+span
+        {
+            display: none;
+        }
+        #age:out-of-range+span
+        {
+            display: block;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h3>Register User</h3>
+    <dl>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text" id="UserName" required>
+            <span>Name Required</span>
+        </dd>
+    </dl>
+    <br><br>
+    <h3>Register User</h3>
+    <dl>
+        <dt>Mobile</dt>
+        <dd>
+            <input type="text" id="mob" pattern="\+91\d{10}">
+            <span>Invalid Mobile</span>
+        </dd>
+    </dl>
+    <br><br>
+    <h3>Register Age</h3>
+    <dl>
+        <dt>Age</dt>
+        <dd>
+            <input type="number" id="age" min="15" max="25">
+            <span>Age 15 to 25 Only</span>
+        </dd>
+    </dl>
+</body>
+</html>
+

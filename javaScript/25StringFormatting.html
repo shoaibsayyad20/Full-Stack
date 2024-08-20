@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Format</title>
+    <script>
+        function TextFormat()
+        {
+            var rangeValue = document.getElementById("ranger");
+            para =  document.querySelector("p");
+            para.style.fontSize = rangeValue.value + "px";
+            para.style.color = document.getElementById("colorPicker").value;
+        }
+    </script>
+</head>
+<body>
+    <div style="margin:20px">
+        10 <input type="range" min="10" max="100" value="10" id="ranger" onchange="TextFormat()"> 100
+        <br>
+        Select Color: <input type="color" id="colorPicker">
+        <br>
+        <p style="text-align:center">Sample Text</p>
+    </div>
+    
+</body>
+</html>

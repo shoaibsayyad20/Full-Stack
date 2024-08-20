@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input using prompt</title>
+    <script>
+        function BodyLoad()
+        {
+            name = prompt("Enter Your name");
+
+            if(name=='')
+            {
+                alert("Name should not be empty");
+            }
+            else if(name == null)
+            {
+                alert("You canceled");
+            }
+            else
+            {
+                document.getElementById("user").innerText = name; 
+            }
+        }
+
+    </script>
+</head>
+<body onload="BodyLoad()">
+    <h2>HOME</h2>
+    <P>Hello ! <span id="user"></span> </P>
+</body>
+</html>

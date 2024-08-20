@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index Example By Using Number Type</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function CalculateBMI()
+        {
+            var h = parseFloat(document.getElementById("txtHeight").value/100);
+            var w = parseInt(document.getElementById("txtWeight").value);
+
+            var BMI = (w / Math.pow(h,2));
+            document.getElementById("result").innerHTML = "BMI : "+ Math.round(BMI);
+            document.getElementById("lblStatus").style.marginLeft = Math.round(BMI) + "%";
+        }
+
+    </script>
+</head>
+<body class="container-fluid">
+   <div class="d-flex justify-content-start ms-4 mt-4 border border-1 p-4 w-50">
+        <div>
+            <div>
+                <h2>BMI Calculator</h2>
+            </div>
+    
+            <div class="mt-4">
+                <input type="radio" value="Male" name="gender" class="form-check-input"> <span class="form-check-label ms-2"> Male </span>
+                <input type="radio" value="Female" name="gender" class="form-check-input ms-4"> <span class="form-check-label ms-2"> Female </span>
+            </div>
+
+            <div class="mt-4">
+                <span>Age (1 year or above) *</span>
+                <div class="input-group mt-2 w-50">
+                    <input type="text" class="form-control">
+                    <span class="input-group-text">years</span>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <div class="d-flex">
+                    <div>
+                        <span>Height *</span>
+                        <div class="input-group mt-2">
+                           <input type="text" class="form-control" id="txtHeight">
+                           <span class="input-group-text">cm</span>
+                        </div>
+                    </div>
+
+                    <div class="ms-4">
+                        <span>Weight *</span>
+                        <div class="input-group mt-2">
+                           <input type="text" class="form-control" id="txtWeight">
+                            <span class="input-group-text">kg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <button class="btn btn-light" onclick="CalculateBMI()">Calculate</button>
+            </div>
+
+            <div class="mt-4">
+                <h2 id="result"></h2>
+            </div>
+
+            <div class="mt-4">
+                <div class="progress mt-4">
+                    <div class="progress-bar bg-dark" style="width: 25%;">
+                        Under Weight below 50Kg
+                    </div>
+                    <div class="progress-bar bg-info" style="width: 25%;">
+                        Normal Weight 50-68Kg
+                    </div>
+                    <div class="progress-bar bg-dark" style="width: 25%;">
+                        Over Weight 68-81Kg
+                    </div>
+                    <div class="progress-bar bg-info" style="width: 25%;">
+                        Obese > 81Kg
+                    </div>
+                </div>
+                <div>
+                    <span id="lblStatus" class="bi bi-triangle-fill">You</span>
+                </div>
+            </div>
+
+        </div>
+       
+   </div>
+    
+</body>
+</html>

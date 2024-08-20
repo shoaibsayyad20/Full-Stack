@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Type</title>
+    <script>
+        function SubmitClick()
+        {
+            var choice = document.getElementById("Choice").value;
+            var c = (choice=="true" ? true : false);
+            
+            if(c==true)
+            { 
+                document.write("You selected Yes");
+            }
+            else
+            {
+                document.write("You selected No");
+            }
+        }
+    </script>
+</head>
+<body>
+    Your Choice
+    <select id="Choice">
+        <option value="true">Yes</option>
+        <option value="false">N0</option>
+    </select>
+    <button onclick="SubmitClick()">Submit</button>
+    
+</body>
+</html>

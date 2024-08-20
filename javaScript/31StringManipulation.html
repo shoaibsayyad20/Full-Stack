@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Match</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        var regExp = / /;
+        
+        function CountrySelect()
+        {
+            var country = document.getElementById("countrylst");
+            var ce = document.getElementById("ErrorCountry");
+            var mob = document.getElementById("txtMobile");
+            if(country.value=="India")
+            {
+                mob.placeholder = "+91 and 10 digits number";
+                regExp = /\+91\d{10}/;
+                ce.innerHTML="";
+            }
+            else if(country.value=="US")
+            {
+                mob.placeholder = "+(1)(425) 555-0100";
+                regExp = /\+\(1\)\(\d{3}\)\s\d{3}-\d{4}/;
+                ce.innerHTML="";
+            }
+            else if(country.value=="UK")
+            {
+                mob.placeholder = "+(44)(20) 1234 5678";
+                regExp = /\+\(44\)\(\d{2}\)\s\d{4} \d{4}/;
+                ce.innerHTML="";
+            }
+            else
+            {
+                ce.innerHTML = "Country not selected".fontcolor('red');
+            }
+        }
+        function VerifyMobile()
+        {
+              var mn = document.getElementById("txtMobile");
+              if(mn.value.match(regExp))
+              {
+                document.write("Mobile verified");
+              }
+              else
+              {
+                document.getElementById("Error").innerHTML = `Mobile Invalid ${mn.placeholder}`.fontcolor('red');
+              }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <dl class="w-25">
+        <dt>Select a country</dt>
+        <dd>
+            <select id="countrylst" class="form-select" onchange="CountrySelect()">
+                <option>Select a country</option>
+                <option>India</option>
+                <option>US</option>
+                <option>UK</option>
+            </select>
+        </dd>
+        <dd id="ErrorCountry"></dd>
+        <dt>Your Mobile Number</dt>
+        <dd>
+            <input type="text" id="txtMobile" class="form-control">
+        </dd>
+        <button class="btn btn-primary w-100" onclick="VerifyMobile()">Submit</button>
+    </dl>
+    <p id="Error"></p>
+</body>
+</html>
+
+

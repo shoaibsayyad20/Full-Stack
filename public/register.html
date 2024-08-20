@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+        <form>
+        <h3>User Register</h3>
+        <dl>
+            <dt>User Name</dt>
+            <dd>
+                <input type="text" name="userName">
+            </dd>
+            <br>
+            <dt>Password</dt>
+            <dd>
+                <input type="password" name="key">
+            </dd>
+            <dt>Age</dt>
+            <dd>
+                <input type="number" name="age" min="15" max="25" step="0.1">
+            </dd>
+            <dt>Price</dt>
+            <dd>
+                <input type="range" name="price" min="10" max="1000" step="10">
+            </dd>
+            <dt>Departure Date</dt>
+            <dd>
+                <input type="datetime" name="date">
+            </dd>
+            <dt>Departure Date</dt>
+            <dd>
+                <input type="datetime-local" name="date1">
+            </dd>
+            <dt>Email</dt>
+            <dd>
+                <input type="email" name="email">
+            </dd>
+            <dt>Your Website</dt>
+            <dd>
+                <input type="url">
+            </dd>
+            <dt>Upload your resume</dt>
+            <dd>
+                <input type="file" name="resume">
+            </dd>
+            <dt>select a color</dt>
+            <dd>
+                <input type="color" name="color">
+            </dd>
+            <dt>Select Gender</dt>
+            <dd>
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+            </dd>
+            <dt>Payment MOde</dt>
+             <dd>
+                <input type="radio" name="pay"> Cash
+                <input type="radio" name="pay"> UPI
+                <input type="radio" name="pay"> Credit card
+             </dd>
+             <dt>Select courses</dt>
+             <dd>
+                <input type="checkbox" checked name="tech" value="oracle"> Oracle
+                <input type="checkbox" name="tech" value="full stack"> Full Stack
+                <input type="checkbox" checked name="tech" value="mysql"> Mysql
+             </dd>
+        </dl>
+        <button>Register</button>
+        </form>
+    </body>
+</html>

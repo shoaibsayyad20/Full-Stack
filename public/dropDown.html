@@ -1,0 +1,88 @@
+<!--
+    1. Only one value is able to selected in the dropdown list hence name is provided in select tag.
+    2. After submitting value is submitted as name=value. e.g: category=ele101.
+    3. If value is not provided then text will be submiited as value. e.g: category=Books
+-->
+<html lang="en">
+<head>
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        meter
+        {
+            width: 100%;
+            height: 20px;
+        }
+    </style>
+</head>
+<body class="container">
+    <h2>Select a category</h2>
+    <form>
+        <select name="category">
+            <option value="all">All</option>
+            <option value="ele101" >Electronics</option>
+            <option value="foot202" selected>Footwear</option>
+            <option value="Fashion" disabled>Fashion</option>
+            <option>Books</option>
+        </select>
+        <button>Submit</button>
+        <br>
+
+        <h2>Se1ect a Category</h2>
+        <select name="category">
+        <option>Select Category</option>
+           <optgroup label="E1ectronics">
+               <option>TV</option>
+               <option>Mobile</option>
+            </optgroup>
+            <optgroup label="Footwear">
+                <option>Casuals</option>
+                <option>Sneakers</option>
+            </optgroup>
+        </select>
+        <button>Submit</button>
+
+        <br>
+        <select name="category" size="3" multiple>
+            <option value="all">All</option>
+            <option value="ele101">Electronics</option>
+            <option value="foot202" selected>Footwear</option>
+            <option value="Fashion" disabled>Fashion</option>
+        </select>
+        <button>Submit</button>
+    </form>
+    
+    <fieldset>
+        <legend>Password Strength</legend>
+        <dl>
+            <dt>Strong Password</dt>
+            <dd>
+                <meter min="1" max="100" value="100" ></meter>
+            </dd>
+            <dt>Weak Password</dt>
+            <dd>
+                <meter min="1" max="100" value="100" low="40" high="80"></meter>
+            </dd>
+            <dt>Poor Password</dt>
+            <dd>
+                <meter min="1" max="100" value="100" low="60" high="80"></meter>
+            </dd>
+        </dl>
+    </fieldset>
+     
+    <fieldset>
+        <legend>Downloading</legend>
+        <dl>
+            <dt>Preparing for Download</dt>
+            <dd>
+               <progress></progress>
+            </dd>
+            <dt>70% Downloaded</dt>
+            <dd>
+                <progress min="1" max="100" value="70"></progress>
+            </dd>
+        </dl>
+    </fieldset>
+     
+</body>
+</html>

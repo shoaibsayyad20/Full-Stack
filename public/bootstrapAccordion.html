@@ -1,0 +1,104 @@
+<!--
+1. accordion-collapse collapse show  
+   - accordion collapse works for accordion
+   - collapse show and hide the content
+   - show menas by default show the content
+
+2. Every accordion(parent) should have id(topic)
+   Every accordion-body should have id(css)
+
+3. data-bs-parent="#topics"
+   accordion-body(css) should work for accordion(topic)
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapse Demo</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+    <h2>Accordion</h2>
+    <div class="accordion" id="topic">
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#css">
+                <h3>CSS Tutorial</h3>
+               </button>
+            </div>
+            <div class="accordion-body accordion-collapse collapse" id="css" data-bs-parent="#topics">
+               <p>
+                Something about CSS. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Error rem iure ad velit alias, reprehenderit deserunt praesentium quaerat ex 
+                 laborum consequatur incidunt libero a. Nesciunt facilis nulla consequatur. Ducimus,
+                officia?
+                Something about CSS. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Error rem iure ad velit alias, reprehenderit deserunt praesentium quaerat ex 
+                laborum consequatur incidunt libero a. Nesciunt facilis nulla consequatur. Ducimus,
+               officia?
+               Something about CSS. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Error rem iure ad velit alias, reprehenderit deserunt praesentium quaerat ex 
+                laborum consequatur incidunt libero a. Nesciunt facilis nulla consequatur. Ducimus,
+               officia?
+            </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#html">
+                    <h3>HTML Tutorial</h3>
+                </button>
+             </div>
+             <div class="accordion-body accordion-collapse collapse" id="html" data-bs-parent="#topic">
+                <p>Something about HTML
+                    Something about CSS. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error rem iure ad velit alias, reprehenderit deserunt praesentium quaerat ex 
+                    laborum consequatur incidunt libero a. Nesciunt facilis nulla consequatur. Ducimus,
+                   officia?
+                   Something about CSS. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                   Error rem iure ad velit alias, reprehenderit deserunt praesentium quaerat ex 
+                   laborum consequatur incidunt libero a. Nesciunt facilis nulla consequatur. Ducimus,
+                  officia?
+                  Something about CSS. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                   Error rem iure ad velit alias, reprehenderit deserunt praesentium quaerat ex 
+                   laborum consequatur incidunt libero a. Nesciunt facilis nulla consequatur. Ducimus,
+                  officia?
+                </p>
+             </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#js">
+                    <h3>JS Tutorial</h3>
+                </button>
+             </div>
+             <div class="accordion-body accordion-collapse collapse" id="js" data-bs-parent="#topic">
+                <p>
+                    Something about JS
+                    Something about CSS. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error rem iure ad velit alias, reprehenderit deserunt praesentium quaerat ex 
+                    laborum consequatur incidunt libero a. Nesciunt facilis nulla consequatur. Ducimus,
+                   officia?
+                   Something about CSS. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                   Error rem iure ad velit alias, reprehenderit deserunt praesentium quaerat ex 
+                   laborum consequatur incidunt libero a. Nesciunt facilis nulla consequatur. Ducimus,
+                  officia?
+                  Something about CSS. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                   Error rem iure ad velit alias, reprehenderit deserunt praesentium quaerat ex 
+                   laborum consequatur incidunt libero a. Nesciunt facilis nulla consequatur. Ducimus,
+                  officia?
+                </p>
+             </div>
+        </div>
+
+    </div>
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

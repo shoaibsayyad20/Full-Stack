@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulation</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function VerifyUser()
+        {
+            var user = document.getElementById("UserName").value;
+            if(user.length<4)
+            {
+                document.getElementById("lblError").innerHTML = "Minimum 4 chars are required".fontcolor('red');
+            }
+            else if(user.length>12)
+            {
+                document.getElementById("lblError").innerHTML = "Maximum 12 chars required".fontcolor('red');
+            }
+            else
+            {
+                document.getElementById("lblError").innerHTML = "";
+            }
+        }
+        function VerifyRequired()
+        {
+            var user = document.getElementById("UserName");
+            var error = document.getElementById("lblError");
+           
+            if(user.value.charCodeAt(0)>=65 && user.value.charCodeAt(0)<=90)
+            {
+                error.innerHTML = "";
+            }
+            else
+            {
+                error.innerHTML = "First letter should be Capital".fontcolor('red');
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text" id="UserName" onkeyup="VerifyUser()" onblur="VerifyRequired()">
+        </dd>
+        <dd id="lblError"></dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic List</title>
+    <script>
+        var categories = ["All", "Electronics", "Footwear", "Fashion", "Books"];
+        function bodyLoad()
+        {
+            /* CREATE LIST USING MAP
+            categories.map(function(value){
+                var li = document.createElement("li");
+                li.innerHTML = value;
+                document.querySelector("ol").appendChild(li);
+            });  
+            */
+            
+            for( var property of categories)
+            {
+                // CREATE LIST USING FOR OF ITERATOR
+                var li = document.createElement("li");
+                li.innerHTML = property;
+                document.querySelector("ol").appendChild(li);
+
+                // CREATE DROPDOWN USING FOR OF ITERATOR
+                
+                var option = document.createElement("option");
+                option.text = property;
+                document.querySelector("select").appendChild(option);
+            }
+       }
+
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <ol>
+
+    </ol>
+    
+    <select>
+
+    </select>
+    
+</body>
+</html>

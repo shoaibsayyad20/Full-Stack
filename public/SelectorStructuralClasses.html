@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <title>Structural pseudo classes</title>
+    <style>
+        tbody tr:nth-child(even)
+        {
+            background-color: rgb(89, 149, 89);
+            color:white
+        }
+        tbody tr:nth-child(odd)
+        {
+            background-color: rgb(220, 109, 109);
+            color: white;
+        }
+        thead tr
+        {
+            background-color: green;
+            color: white;
+        }
+        td:empty
+        {
+            background-color: gray;
+        }
+        :root
+        {
+            font-family:arial;
+        }
+    </style>
+</head>
+<body>
+    <table width="300" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>TV</td>
+                <td>40000</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>10000</td>
+            </tr><tr>
+                <td>shoes</td>
+                <td>4000</td>
+            </tr><tr>
+                <td>Shirt</td>
+                <td>400</td>
+            </tr><tr>
+                <td>Sneker</td>
+                <td></td>
+            </tr>
+        </tbody>
+
+    </table>
+    
+</body>
+</html>

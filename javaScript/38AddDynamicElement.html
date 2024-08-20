@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding element dynamically</title>
+    <script>
+        function bodyLoad()
+        {
+           /* CREATE IMAGE 
+            var pic = document.createElement("img");
+            pic. src = "../public/assets/devops.jpeg";
+            pic.width = "200";
+            pic.height = "200";
+            document.querySelector("div").appendChild(pic); */
+            
+            // CREATE DROPDOWN 
+            var select = document.createElement("select");
+            var option1 = document.createElement("option");
+            var option2 = document.createElement("option");
+            option1.text = "Footwear";
+            option2.text = "Casual";
+            select.appendChild(option1);
+            select.appendChild(option2);
+            document.querySelector("div").appendChild(select);
+        }
+
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <div>
+
+    </div>
+</body>
+</html>

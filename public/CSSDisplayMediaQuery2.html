@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        nav {
+            font-size: 20px;
+        }
+        @media screen and  (min-width:551px)
+        {
+             nav {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+             }
+             nav span {
+                padding: 0px 10px 0px 10px;
+             }
+             .toggler {
+                display: none;
+             }
+        }
+        @media screen and (max-width:550px) {
+            nav {
+                display: flex;
+                justify-content: space-between;
+            }
+            .navbar {
+                display: none;
+            }
+            .shortcuts {
+                display: none;
+            }
+            .toggler {
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <span>Shopper</span>
+        </div>
+        <div class="navbar">
+            <span>Home</span>
+            <span>Shop</span>
+            <span>Pages</span>
+            <span>Docs</span>
+            <span>Blog</span>
+        </div>
+        <div class="shortcuts">
+            <span class="bi bi-search"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart"></span>
+        </div>
+        <div class="toggler">
+            <button class="bi bi-justify"></button>
+        </div>
+    </nav>
+</body>
+</html>
+

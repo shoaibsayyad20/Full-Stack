@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulation</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function VerifyCard()
+        {
+            var key = document.getElementById("card").value;
+            var pict = document.getElementById("pic");
+
+            if(key.startsWith("45"))
+            {
+                pict.src ="../public/assets/visa.jpg";
+            }
+            else if(key.startsWith("54"))
+            {
+                pict.src = "../public/assets/master.jpg";
+            }
+            else
+            {
+                pict.scr="";
+                pict.alt ="N/A";
+            }
+        }
+
+        function VerifySkype()
+        {
+            var sky = document.getElementById("skype").value;
+            var error = document.getElementById("skypeError");
+
+            if(sky.endsWith("outlook.com"))
+            {
+                error.innerHTML = "Valid ID".fontcolor('green');
+            }
+            else
+            {
+                error.innerHTML = "Invalid ID".fontcolor('red');
+            }
+        }
+
+        function VerifyId()
+        {
+            var user = document.getElementById("UserId").value;
+            var error = document.getElementById("ErrorId");
+            
+            if(user.trim()=="john_nit")
+            {
+                error.innerHTML = "Valid User".fontcolor('green');
+            }
+            else
+            {
+                error.innerHTML = "Invalid User".fontcolor('red');
+            }
+          
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User ID</dt>
+        <dd>
+            <input type="text" id="UserId" onblur="VerifyId()">
+        </dd>
+        <dd id="ErrorId"></dd>
+        <dt>Card Number</dt>
+        <dd class="input-group">
+            <input type="text" id="card" onkeyup="VerifyCard()"><img width="50" id="pic">
+        </dd>
+
+        <dt>Your ID</dt>
+        <dd>
+            <input type="text" id="skype" placeholder="outlook.com" onblur="VerifySkype()">
+        </dd>
+        <dd id="skypeError"></dd>
+    </dl>
+</body>
+</html>

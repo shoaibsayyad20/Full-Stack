@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referring Elements By ID</title>
+    <script type="text/javascript">
+        function bodyload()
+        {
+            document.getElementById("poster").src = "../public/assets/women.webp";
+            document.getElementById("btnRegister").value = "Register";
+            document.getElementById("btnLogin").value="Login";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img width="100" height="100" id="poster">
+    </div>
+    <div>
+        <form name="frmRegister">
+            <h2>Register</h2>
+            Your Email : <input type="email" name="txtEmail"> <input id="btnRegister" name="" type="button">
+        </form>
+    </div>
+    <div>
+        <form name="frmLogin">
+            <h2>Login</h2>
+            Your OTP : <input type="text" name="txtOtp"> <input id="btnLogin" type="button">
+        </form>
+    </div>
+</body>
+</html>

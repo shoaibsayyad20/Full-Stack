@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+      <title>Shopping Site</title>
+      <style>
+        a
+        {
+            text-decoration: none;
+            color: white;
+        }
+        header
+        {
+            background-color: chocolate;
+            color: white;
+            padding: 30px;
+            font-size: 30px;
+            text-align:center;
+        }
+        footer
+        {
+            background-color: chocolate;
+            color: white;
+            padding : 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+        section
+        {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        ul
+        {
+            list-style: none;
+        }
+        li
+        {
+            background-color: chocolate;
+            color: white;
+            margin: 20px;
+            width: 200px;
+            margin-left: -30px;
+            padding: 6px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        iframe
+        {
+            height: 550px;
+            width: 600px;
+            border: none;
+        }
+      </style>
+
+    </head>
+    <body>
+        <header>
+            <div><span class="bi bi-cart4"></span> Shopping Online</div>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="home.html" target="framebody">Home</a></li>
+                    <li><a href="electronics.html" target="framebody">Electronics</a></li>
+                    <li><a href="fashion.html" target="framebody">Fashion</a></li>
+                    <li><a href="footwear.html" target="framebody">Footwear</a></li>
+                </ul>
+
+            </nav>
+            <main>
+                <iframe name="framebody" src="home.html"></iframe>
+            </main>
+
+        </section>
+
+        <footer>
+            <div>
+                &copy; copyright 2024
+            </div>
+        </footer>
+        
+    </body>
+</html>

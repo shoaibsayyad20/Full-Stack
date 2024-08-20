@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Manipulations</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        var cities = ["Delhi", "Hyd", "Chennai"];
+        function LoadCities()
+        {
+            document.getElementById("lstCities").innerHTML = ""; //it clears list not array so that it will display with new value and avoid repeatation.
+            for(var city of cities)
+            {
+                var option = document.createElement("option");
+                option.text = city;
+                option.value = city;
+                document.getElementById("lstCities").appendChild(option);
+            }
+            document.getElementById("lblCount").innerHTML = `Total number of cities: ${cities.length}`;
+        }
+        function bodyLoad()
+        {
+            LoadCities();
+        }
+        function AddClick()
+        {
+            var cityName = document.getElementById("txtCity").value;
+            if(cities.indexOf(cityName)==-1)
+            {
+                cities.push(cityName);
+                alert(`${cityName} added to list`);
+                LoadCities();    // if we only add value to array then it is only added to array not will display in the list.
+                document.getElementById("txtCity").value = "";
+            }
+            else
+            {
+                alert(`${cityName} Exist`);
+                document.getElementById("txtCity").value = "";
+            }
+        }
+        function sortAsc()
+        {
+            cities.sort();
+            LoadCities();
+        }
+        function sortDesc()
+        {
+            cities.sort();
+            cities.reverse();
+            LoadCities();
+        }
+        function RemoveClick()
+        {
+            var selectedCityName = document.getElementById("txtCity").value;
+            var selectedCityIndex = cities.indexOf(selectedCityName);
+            var flag = confirm(`${selectedCityIndex} delete\n Are you sure want to delete ?`);
+            if(flag)
+            {
+                cities.splice(selectedCityName, 1);
+                LoadCities();
+            }
+        }
+        function ClearClick()
+        {
+            cities =[];
+            LoadCities();
+        }
+        function ClickSearch()
+        {
+            var search = document.getElementById("txtSearch").value;
+            var index = cities.indexOf(search);
+            if(cities.indexOf(search)==-1)
+            {
+                alert(`${search} not found`);
+            }
+            else
+            {
+                var listbox = document.getElementById("lstCities");
+                listbox.options[index].selected = true;   // listbox.options is an array of option elements.
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyLoad()">
+    <div class="mt-3 w-25 bg-dark text-white p-3 h-75">
+        <div class="mt-2 mb-2">
+            <label class="form-label fw-bold">Serach City</label>
+            <div class="input-group">
+                <input type="text" id="txtSearch" class="form-control">
+                <button class="btn btn-warning" onclick="ClickSearch()">Search</button>
+            </div>
+        </div>
+        <div class="mt-2 mb-2">
+            <label class="form-lable fw-bold">New City</label>
+            <div class="input-group">
+                <input type="text" id="txtCity" class="form-control">
+                <button class="btn btn-primary" onclick="AddClick()">Add</button>
+            </div>
+        </div>
+        <div>
+             <label class="form-lable fw-bold">Cities List</label>
+             <div class="mt-2 mb-2">
+                <button class="btn btn-success" onclick="sortAsc()">
+                    <span class="bi-sort-alpha-down"></span>
+                </button>
+
+                <button class="btn btn-success" onclick="sortDesc()">
+                    <span class="bi-sort-alpha-up"></span>
+                </button>
+
+             </div>
+             <select class="form-select" size="3" id="lstCities">
+
+             </select>
+
+             <div class="mt-3">
+                <label id="lblCount"></label>
+             </div>
+
+             <div class="mt-3"> 
+                <button class="btn btn-danger" onclick="RemoveClick()">
+                   <span class="bi bi-trash-fill"></span> Remove City
+                </button>
+
+                <button class="btn btn-danger" onclick="ClearClick()">
+                   <span class="bi bi-trash2"></span> Clear All
+                </button>
+
+             </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

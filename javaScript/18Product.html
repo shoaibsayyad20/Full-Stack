@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Product by taking input from form</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        function RegisterClick()
+        {
+            document.getElementById("lblName").innerText = document.getElementById("txtName").value;
+            document.getElementById("lblPrice").innerText = document.getElementById("txtPrice").value;
+            document.getElementById("lblCity").innerText = document.getElementById("lstCities").value;
+            
+            stock = "";
+            stockCheckbox = document.getElementById("optStock");
+            
+            if(stockCheckbox.checked) {
+                  stock = "Available";
+              } else {
+                  stock = "Out of Stock";
+              }
+
+            document.getElementById("lblStock").innerText = stock;
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <div id="registerContainer" class="w-25">
+        <h2>Register Product</h2>
+        <dl>
+            <dt>Name</dt>
+            <dd><input type="text" id="txtName" class="form-control"></dd>
+            <dt>Price</dt>
+            <dd><input type="number" id="txtPrice" class="form-control"></dd>
+            <dt>Shipped To</dt>
+            <dd>
+                <select id="lstCities" class="form-select">
+                    <option>Select City</option>
+                    <option>Delhi</option>
+                    <option>Hyd</option>
+                </select>
+            </dd>
+            <dt>Stock</dt>
+            <dd class="form-switch">
+                <input type="checkbox" id="optStock" class="form-check-input"> <label class="form-check-label">Available</label>
+            </dd>
+        </dl>
+        <button class="btn btn-primary w-100" data-bs-target="#details" data-bs-toggle="modal" onclick="RegisterClick()">Register</button>
+
+        <div class="modal fade" id="details">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Product Details</h2>
+                    </div>
+                    <div class="modal-body">
+                        <dl>
+                            <dt>Name</dt>
+                            <dd id="lblName"></dd>
+                            <dt>Price</dt>
+                            <dd id="lblPrice"></dd>
+                            <dt>City</dt>
+                            <dd id="lblCity"></dd>
+                            <dt>Stock</dt>
+                            <dd id="lblStock"></dd>
+                        </dl>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+</body>
+</html>

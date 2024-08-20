@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Prompt</title>
+    <script>
+        function StartClick()
+        {
+              folder = prompt("Enter Folder Name");
+              if(folder=="")
+              {
+                alert("Folder name should not be empty");
+              }
+              else if(folder==null)
+              {
+                alert("You Canceled");
+              }
+              else
+              {
+                 document.querySelector("p").innerHTML += "Folder Name: "+ folder + "<br>";
+              }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="StartClick()">Add Folder</button>
+    <p></p>
+</body>
+</html>

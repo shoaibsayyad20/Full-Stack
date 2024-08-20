@@ -1,0 +1,63 @@
+<!--
+1. Bootstrap prefers using ul & li for nav & nav-item respectively.
+2. nav-pills are generally used with button as nav-item inside.
+The target for buttons and hyperlink will change in jquery.
+Button uses click to toggle.
+Link uses href to toggle.
+e.g:
+<button onclick=”function()”>
+<a href=”javascript:fuction()”>
+Hence, Anchor element doesn’t require “target”.
+<a href=”#target”  data-bs-toggle=”component”>
+Bootstrap 5 refers using botton for handling click instead of anchors.
+<ul class="nav nav-pills">
+        <li class="nav-item"><button data-bs-toggle="pill" data-bs-target="#basic"   class="nav-link" >Basic Details</button></li>
+        <li class="nav-item"><button data-bs-toggle="pill" data-bs-target="#preview" class="nav-link">Preview</button></li>
+        <li class="nav-item"><button data-bs-toggle="pill" data-bs-target="#description" class="nav-link">Description</button></li>
+</ul>
+
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav & Nav Bar</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+     
+     <h2>Product Info</h2>
+     <ul class="nav nav-tabs">
+        <li class="nav-item"><button data-bs-toggle="tab" data-bs-target="#basic"   class="nav-link" >Basic Details</button></li>
+        <li class="nav-item"><button data-bs-toggle="tab" data-bs-target="#preview" class="nav-link">Preview</button></li>
+        <li class="nav-item"><button data-bs-toggle="tab" data-bs-target="#description" class="nav-link">Description</button></li>
+     </ul>
+
+     <div class="tab-content">
+          <div class="tab-pane active show" id="basic">
+             <h2>Basic Details</h2>
+             <dl>
+                <dt>Name</dt>
+                <dd>BoAt Neckband</dd>
+                <dt>Price</dt>
+                <dd>5600</dd>
+             </dl>
+          </div>
+
+          <div class="tab-pane" id="preview">
+            <h2>Preview</h2>
+              <img src="./assets/earpods.jfif" width="200" height="200">
+          </div>
+
+          <div class="tab-pane" id="description">
+               <h2>Description</h2>
+               <p>Something about neckband..</p>
+          </div>
+
+     </div>
+     
+     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+     <script src="../node_modules/jquery/dist/jquery.js"></script>
+</body>
+</html>

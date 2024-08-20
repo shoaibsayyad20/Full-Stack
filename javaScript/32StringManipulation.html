@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function VerifyPassword() 
+        {
+            var password = document.getElementById("txtPswd").value;
+            var regExp = /(?=.*[A-Z])\w{4,10}/;
+            var error = document.getElementById("error");
+            var status = document.getElementById("status");
+
+            function setStatus(min,max,value)
+            {
+                status.min = min;
+                status.max = max;
+                status.value =value;
+            }
+            if (password.match(regExp)) {
+                error.className = "text-success";
+                error.innerHTML = "Strong Password";
+                setStatus(1,100,100);
+            } 
+            else {
+                if (password.length < 4){
+                    error.className = "text-danger";
+                    error.innerHTML = "Poor Password - min 4 chars required";
+                    setStatus(1, 100, 20);
+                }
+                else
+                {
+                    error.className = "text-warning";
+                    error.innerHTML = "Weak Password - Atleast 1 Uppercase";
+                    setStatus(1, 100, 60);
+                }
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <h3>Verify Password</h3>
+    <dl>
+       <dt>Password</dt>
+       <dd>
+           <input type="text" onkeyup="VerifyPassword()" id="txtPswd">
+           <div>
+                <meter id="status"></meter>
+           </div>
+        </dd>
+       <dd id="error"></dd>
+    </dl>
+</body>
+</html>

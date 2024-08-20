@@ -1,0 +1,38 @@
+<!--
+1. Dropdown menu should hide or show after clicking button
+2. Inside dropdown there is only one web component to toggle hence no need of data-bs-target here.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Dropdown</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+   <h2>Dropdown</h2>
+   <div class="dropdown">
+       <button class="dropdown-toggle" data-bs-toggle="dropdown">
+          <span class="bi bi-globe"></span> Language
+       </button>
+       <div class="dropdown-menu collapse">
+          <div class="dropdown-item">
+             <span class="dropdown-item-text"><span class="bi bi-airplane"></span> English</span>
+          </div>
+          <div class="dropdown-item">
+              <span class="bi bi-house-fill"></span> Hindi
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item">
+               <a href="#"> Help? </a>
+           </div>
+        </div>
+   </div>
+
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

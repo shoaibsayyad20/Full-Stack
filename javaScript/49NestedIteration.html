@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Iteration</title>
+    <script>
+        function bodyload() {
+            var menu = [
+                { Category: "Electronics", Products: ["Televisions", "Mobiles"] },
+                { Category: "Footwear", Products: ["Casuals", "Boots"] }
+            ]
+
+            menu.map(function(item){
+                var li = document.createElement("li");            // for nested list
+                li.innerHTML = item.Category;
+
+                var optGroup = document.createElement("optgroup");   // for  nested Dropdown
+                optGroup.label = item.Category;  
+                
+                var details = document.createElement("details");     // For  details & summary
+                var summary = document.createElement("summary");
+                summary.innerHTML = item.Category;
+                var summaryList = document.createElement("ul");   
+                
+                    
+
+                item.Products.map(function(product){
+                    var ul = document.createElement("ul");                // for nested list
+                    var ulli = document.createElement("li");
+
+                    ulli.innerHTML = product;
+                    ul.appendChild(ulli);
+                    li.appendChild(ul);
+                    document.querySelector("ol").appendChild(li);
+
+                    var option = document.createElement("option");     // for  nested Dropdown
+                    option.innerHTML = product;
+                    optGroup.appendChild(option);
+                    document.querySelector("select").appendChild(optGroup); 
+
+                    // For  details & summary(By shoaib logic and it avoid repeataion of task)
+                    var summaryListItem = document.createElement("li");
+                    summaryListItem.innerHTML = product;
+                    summaryList.appendChild(summaryListItem);
+                    
+                    
+                })
+                details.appendChild(summary);
+                details.appendChild(summaryList);
+                document.querySelector("nav").appendChild(details);
+                
+            })
+        }
+
+    </script>
+</head>
+
+<body onload="bodyload()">
+    <ol>
+
+    </ol>
+    <select>
+
+    </select>
+    <br><br>
+    <div>
+        <nav>
+
+        </nav>
+    </div>
+</body>
+
+</html>

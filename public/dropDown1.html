@@ -1,0 +1,55 @@
+<!--
+    1. Only one value is able to selected in the dropdown list hence name is provided in select tag.
+    2. After submitting value is submitted as name=value. e.g: subject=maths.
+    3. If value is not provided then text will be submiited as value. e.g: subject=Biology.
+-->
+<html lang="en">
+<head>
+    <title>Dropdown List</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<style>
+    div
+    {
+        margin:20px;
+        padding: 20px;
+    }
+</style>
+<body>
+    <form> 
+        <div>
+            <select name="subject">
+                <option selected>Select a subject</option>
+                <option value="Maths">Mathematics</option>
+                <option value="Sci">Science</option>
+                <option value="Eng">English</option>
+                <option value="Phy">Physics</option>
+                <option value="Chemistry" disabled>Chemistry</option>
+                <option >Biology</option>
+            </select>
+            <button>Submit</button>
+        </div>
+
+        <div>
+            <select name="Player">
+                <option>Select a player</option>
+                <optgroup label="India">
+                  <option>Virat</option>
+                  <option>Rohit</option>
+                </optgroup>
+                <optgroup label="Australia">
+                    <option>Smith</option>
+                    <option>Warner</option>
+                </optgroup>
+                <optgroup label="England">
+                    <option>Root</option>
+                    <option>Butler</option>
+                </optgroup>
+            </select>
+            <button>Submit</button>
+        </div>
+         
+
+    </form>
+</body>
+</html>

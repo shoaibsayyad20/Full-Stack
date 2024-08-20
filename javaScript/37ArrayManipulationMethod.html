@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1() 
+        {
+            var products = ["mobile", 5000, "available", 4000, true];
+            document.write(products.toString());
+            document.write("<br>");
+        }
+        function f2()
+        {
+            var products = ["mobile", 5000, "available", 4000, true];
+            document.write(products.join(" | "));
+            document.write("<br>");
+        }
+        function f3()
+        {
+            var products = ["mobile", 5000, "available", 4000, true];
+            document.write(products.find(function(value){
+                if(value>3000) return value;
+            }));
+            document.write("<br>");
+        }
+        function f4() 
+        {
+            var products = ["mobile", 5000, "available", 4000, true];
+            document.write(products.filter(function (value) {
+                if (value > 3000) return value;
+            }));
+            document.write("<br>");
+        }
+        function f5()
+        {
+            var numbers=[123,745,459,754,74,954,164];
+            document.write(numbers.slice(0,3));
+            document.write("<br>");
+        }
+        function f6()
+        {
+            var categories = ["Mobile", "Electronics", "Fashion", "Books"];
+            categories.map(function(value){
+                document.write(`<li> ${value} </li>`);
+            });
+        }
+
+       f1();
+       f2();
+       f3();
+       f4();
+       f5();
+       f6();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

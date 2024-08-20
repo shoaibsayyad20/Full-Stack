@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Formatting</title>
+    <style>
+        .error-style
+        {
+            color: red;
+            font-style: italic;
+        }
+    </style>
+    <script>
+        function ChangeCase()
+        {
+            var username = document.getElementById("txtInput").value;
+            document.getElementById("txtInput").value = username.toUpperCase().bold();
+        }
+        function VerifyName()
+        {
+            var username = document.getElementById("txtInput");
+            var error = document.getElementById("Error");
+            if(username.value=="")
+            {
+               error.innerHTML = "Username is required";
+               error.className = "error-style";
+               username.style.border = "1px solid red";
+               username.style.boxShadow = "2px 2px 2px red";
+            }
+            else
+            {
+                error.innerHTML = "";
+            }
+        }
+    </script>
+</head>
+<body>
+   <dl>
+       <dt>Your Name:</dt>
+       <dd>
+        <input type="text" onkeyup="ChangeCase()" onblur="VerifyName()" placeholder="Enter name in block letters" id="txtInput">
+       </dd>
+       <dd id="Error"></dd>
+   </dl>
+    
+    
+</body>
+</html>

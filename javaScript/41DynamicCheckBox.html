@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Checkbox</title>
+    <script>                                                           
+        var categories = ["All", "Electronics", "Footwear", "Fashion"];
+        function bodyLoad()
+        {
+           for(var product of categories)
+           {
+               /*
+               var li = document.createElement("li");
+               var input = document.createElement("input");
+               var label = document.createElement("label");
+
+               input.type = "checkbox";
+               label.innerText = product;
+
+               li.appendChild(input);
+               li.appendChild(label);
+               document.querySelector("ul").appendChild(li);   */
+               
+               //OR
+               var li = document.createElement("li");
+               li.innerHTML = `<input type="checkbox"><label>${product}</label>`;
+               document.querySelector("ul").appendChild(li);
+                    
+               // NAV BAR FOR LINKS
+               var anchor = document.createElement("a");
+               var br = document.createElement("br");
+               anchor.href="#";
+               anchor.innerText = product;
+               document.querySelector("nav").appendChild(anchor);
+               document.querySelector("nav").appendChild(br);
+           }
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <ul>
+      
+    </ul>
+    <br><br>
+    <nav>
+         
+    </nav>
+</body>
+</html>
+
+
+
+
+

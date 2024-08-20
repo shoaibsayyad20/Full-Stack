@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .cont
+        {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .shoe {
+            width: 500px;
+            height: 600px;
+            background-image: url("./assets/azure.jpeg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            overflow:hidden;
+        }
+        .shoe:hover {
+            background-image: url("./assets/devops.jpeg");
+            background-size: cover;
+            transition: 1s;
+        }
+        .shoe:hover .fav-icons {
+            transform: translateY(-40px);
+            transition: 1s;
+            opacity: 1;
+        }
+        .fav-icons span {
+            background-color: white;
+            width: 20px;
+            height: 20px;
+            padding: 10px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .fav-icons span:hover {
+            background-color: red;
+            color:white;
+        }
+        .fav-icons {
+            transform: translateY(40px);
+            transition: 1s;
+            opacity: 0;
+        }
+        .shoe1
+        {
+            width: 500px;
+            height: 600px;
+            background-image: url(./assets/men.webp);
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            overflow: hidden;
+        } 
+        .shoe1:hover
+        {
+            background-image: url(./assets/kid.jpeg);
+            background-size: cover;
+            transition: 1s;
+        }
+        .fav-icons1
+        {
+            transform: translateY(40px);
+            transition: 1s;
+            opacity:0;
+        }
+        .shoe1:hover .fav-icons1
+        {
+            transform: translateY(-40px);
+            transition: 1s;
+            opacity:1;
+        }
+        .fav-icons1 span:hover
+        {
+            background-color: red;
+            color: white;
+        }
+        .fav-icons1 span
+        {
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            padding: 10px;
+            background-color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="shoe">
+            <div class="fav-icons">
+                <span class="bi bi-eye"></span>
+                <span class="bi bi-cart"></span>
+                <span class="bi bi-heart"></span>
+            </div>
+        </div>
+    
+        <div class="shoe1">
+            <div class="fav-icons1">
+                <span class="bi bi-eye"></span>
+                <span class="bi bi-cart"></span>
+                <span class="bi bi-heart"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

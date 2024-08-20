@@ -1,0 +1,53 @@
+<!--
+Navbar toggler uses collapse for navbar to show or hide the toggler button and also the menu items. It requires the attribute.
+data-bs-target=menuid
+data-bs-toggle=collapse
+It uses pre-defined media queries to show or hide the toggler. Hence you have to define in “container-fluid”.
+
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
+        <div class="container-fluid">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menulist">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="#">
+                <span class="bi bi-cart4"></span> Amazon
+            </a>
+            
+            <div class="collapse navbar-collapse" id="menulist">
+                
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link"> Home </a></li>
+                        <li class="nav-item"><a class="nav-link"> About </a></li>
+                        <li class="nav-item"><a class="nav-link"> Contact </a></li>
+                    </ul>
+                    <div>
+                        <form class="input-group w-75 m-4">
+                            <input type="text" class="form-control ">
+                            <button class="btn btn-warning">Search</button>
+                        </form>
+                    </div>
+                
+            </div>
+        </div>
+
+
+    </nav>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
+
+

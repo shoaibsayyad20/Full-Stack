@@ -1,0 +1,49 @@
+<!---
+CSS Clear
+- It clears the float wrapping at specified direction.
+- If you define float for any element it wraps the adjacent content beside. You can control by using clear.
+
+Syntax:
+    h1 {
+        float:left;        
+    }
+    p {
+        clear : left;            => clear : left | right | both
+    }
+
+    <h1> Heading </h1>
+    <p> Para </p>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h1 {
+            float: left;
+            border: 1px solid black;
+        }
+        p
+        {
+            clear:left;
+        }
+        .h2
+        {
+            float:right;
+        }
+        div
+        {
+            clear:right;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="h1">Welcome</h1>
+    <p>Styling HTML Page</p>
+    <h1 class="h2">CSS</h1>
+    <div>CSS Styles</div>
+</body>
+</html>

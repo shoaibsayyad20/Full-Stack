@@ -1,0 +1,112 @@
+<!--
+Form CSS Classes
+- Class is a program template that provides pre-defined logic and styles.
+- You can inherit a class and implement the functionality.
+- Class is a template hence it allows to customize the functionality.
+- CSS provides various classes related to different functionalities.
+- The form related classes are classified into
+        1. Element State Classes
+        2. Validation State Classes
+
+Element State Classes:
+       
+    :read-only            It sets effects when element is readonly.
+    :disabled             It sets effects when element is disabled.
+    :focus                It sets effects when element gets focus.
+    :checked              It sets effects when radio or checkbox are checked.
+
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form CSS Classes</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        input:read-only
+        {
+            background-color: lightgray;
+            cursor:not-allowed;
+        }
+        .userName+div
+        {
+           display:none;
+        }
+        .userName:focus+div
+        {
+            display:block;
+            font-size:14px;
+            color:red;
+        }
+        button:disabled
+        {
+            border: 1px solid black;
+            background-color: red;
+            color:white;
+            cursor:not-allowed;
+        }
+        .Mobile+div
+        {
+            display:none;
+        }
+        .Mobile:focus+div
+        {
+            display: block;
+            color:red;
+            font-size:14px;
+        }
+        .terms+label
+        {
+            color:red;
+        }
+        .terms:checked+label
+        {
+            color:green;
+        }
+        .terms~button
+        {
+            display:none;
+        }
+        .terms:checked~button
+        {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd>
+                <input type="text" name="userName" class="userName" pattern="[A-Z]{4,10}">
+                <div>Name in BLock Letters</div>
+            </dd>
+            <dt>Mobile</dt>
+            <dd>
+                <input type="text" name="mobile" class="Mobile" placeholder="+91 and 10 digits number" pattern="\+91\d{10}">
+                <div>+91 and 10 digits</div>
+            </dd>
+        </dl>
+        <button>Submit</button>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>Terms and condtions</legend>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio molestias rem officia atque at mollitia ipsum vero, voluptas tempore, sapiente voluptates aperiam nobis adipisci similique assumenda nesciunt ducimus saepe soluta?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio molestias rem officia atque at mollitia ipsum vero, voluptas tempore, sapiente voluptates aperiam nobis adipisci similique assumenda nesciunt ducimus saepe soluta?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio molestias rem officia atque at mollitia ipsum vero, voluptas tempore, sapiente voluptates aperiam nobis adipisci similique assumenda nesciunt ducimus saepe soluta?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio molestias rem officia atque at mollitia ipsum vero, voluptas tempore, sapiente voluptates aperiam nobis adipisci similique assumenda nesciunt ducimus saepe soluta?
+            </p>
+        
+            <br><br>
+            <input type="checkbox" class="terms"><label >I agree</label>
+            <br><br>
+            <button>Register</button>
+        </fieldset>
+    </form>
+</body>
+</html>

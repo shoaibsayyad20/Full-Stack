@@ -1,0 +1,38 @@
+<!--
+CSS List Style
+
+list-style-type             [number, alpha, roman, disc, circle]
+list-style-image            [custom image]
+list-style-position         [inside, outside]
+list-style                  [short hand]
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       ol {
+        list-style-image: url("./assets/favicon.ico");
+        font-size: 34px;
+        list-style-position: inside;
+       }
+        li {
+            border:1px solid black;
+            width: 200px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+    </ol>
+</body>
+</html>

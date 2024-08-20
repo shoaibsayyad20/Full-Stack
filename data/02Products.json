@@ -1,0 +1,17 @@
+[
+    {
+        "Name": "Realme Aqua Blue",
+        "Price": 9950,
+        "Photo": "../public/assets/realme.png"
+    },
+    {
+        "Name": "Realme Gold",
+        "Price": 1150,
+        "Photo": "../public/assets/realmegold.jpg"
+    },
+    {
+        "Name": "Kitchen Accessories",
+        "Price": 1550,
+        "Photo": "../public/assets/ap3.jpg"
+    }
+]

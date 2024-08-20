@@ -1,0 +1,122 @@
+<!--
+    1.  justify-content: center; will keep horizontal alignment to center.
+    2.  align-items: center; will keep vertical alignment to center.
+    3.  justify-content: space-between; put one content on left extreme and one content on right extreme
+        after defining dispaly: flex.
+    
+-->
+<!DOCTYPE html>
+<html lang>
+<head>
+    <title>Netflix</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        body
+        {
+            background-image: url(assets/netflixback.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: Arial;
+        
+            
+        }
+        .container
+        {
+            
+        
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+            width:1200px;
+            background-color: rgba(0, 0, 0, 0.7); 
+        }
+        .main-content
+        {
+            
+            width: 400px;
+            border: 2px solid red;
+        }
+        p
+        {
+            font-size: 24px;
+        }
+        header
+        {
+            display: flex;
+            justify-content: space-between;
+        
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        button
+        {
+            background-color: red;
+            color: white;
+            border: none;
+        }
+        button,select
+        {
+            height: 30px;
+            width: 120px;
+        }
+        #email
+        {
+            height: 30px;
+        }
+        .input-group
+        {
+            width: 400px;
+            justify-content: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <font color="red">
+            <font size="6">N</font>
+            <font size="6">E</font>
+            <font size="6">T</font>
+            <font size="6">F</font>
+            <font size="6">L</font>
+            <font size="6">I</font>
+            <font size="6">X</font>
+            </font>
+         </div>
+         <div>
+            <select>
+                <option>Language</option>
+                <option>English</option>
+                <option>हिंदी</option>
+            </select>
+            <button>Signin</button>
+         </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="main-Content">
+            <h1>Unlimited movies, TV shows and more.</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            
+        </div>
+        
+        <p>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Your email address" class="form-control">
+            <button>
+                Get Started <span class="bi bi-chevron-right"></span>
+            </button>
+            </div>
+        </p>
+       
+
+    </div>
+</body>
+</html>

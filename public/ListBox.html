@@ -1,0 +1,38 @@
+<!--
+    1. List box is similar to the dropdown list.
+    2. we just need to add size or multiple attribute.
+-->
+<html lang="en">
+<head>
+    <title>List Box</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        div
+        {
+            margin:20px;
+            padding:20px;
+        }
+        select
+        {
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+     <form>
+           <div>
+            <select name="subject" multiple>
+                <option selected>Select a subject</option>
+                <option value="Maths">Mathematics</option>
+                <option value="Sci">Science</option>
+                <option value="Eng">English</option>
+                <option value="Phy">Physics</option>
+                <option value="Chemistry" disabled>Chemistry</option>
+                <option >Biology</option>
+            </select>
+            <button>Submit</button>
+           </div>
+     </form>
+</body>
+</html>
+

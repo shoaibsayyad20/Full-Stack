@@ -1,0 +1,247 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Shooper</title>
+    <style>
+        header
+        {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+            font-family: arial;
+            
+        }
+        #logo
+        {
+            font-weight: bold;
+            font-size: 25px;
+        }
+        nav
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 420px;
+            font-size: 18px;
+            font-weight: bold;
+            padding-top: 5px;
+        }
+        #asd
+        {
+            
+            padding-top: 5px;
+            width:120px;
+            display: flex;
+            justify-content: space-between;
+        }
+        article
+        {
+           
+            margin-top: 15px;
+            padding: 15px;
+            text-align: center;
+            background-color: rgb(35, 33, 33);
+            color: white;
+            font-family: arial;
+            font-size: 13px;
+        }
+        .bi-lightning-fill
+        {
+            color: rgb(211, 145, 24);
+        }
+        section
+        {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+        
+        }
+        #menPanel
+        {
+            height: 450px;
+            background-image: url(../public/assets/men.webp);
+            background-size: 100% 450px;
+            background-repeat: no-repeat;
+            color: rgb(255, 254, 254);
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #kidPanel
+        {
+            height: 450px;
+            background-image: url(../public/assets/kid.jpeg);
+            background-size: 100% 450px;
+            background-repeat: no-repeat;
+            color: rgb(255, 254, 254);
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #womenPanel
+        {
+            height: 450px;
+            background-image: url(../public/assets/women.webp);
+            background-size: 100% 450px;
+            background-repeat: no-repeat;
+            color: rgb(255, 254, 254);
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    
+        button
+        {
+            width: 200px;
+            height: 50px;
+            background-color: white;
+            color: black;
+            border: none;
+            font-family: Arial;
+            font-size: 15px;
+            
+        }
+       .txt
+       {
+            padding-bottom: 10 rem;
+            font-family: Arial;
+            font-size: 50px;
+            font-weight: bold;  
+       }
+       footer
+       {
+          background-color: black;
+          color: white;
+          margin-top: 10px;
+          height:600px; 
+       }
+       .fhead
+       {
+           text-align: center;
+           padding-top:80px;
+       }
+       input[type="email"]
+       {
+          height:52px;
+          width:400px;
+       }
+       .fbody
+       {
+         display: grid;
+         grid-template-columns: 2.5fr 2.5fr 2.5fr 2.5fr 2.5fr;
+         margin-left: 200px;
+         margin-top: 80px;
+         width:1200px;
+       }
+       .fcol
+       {
+         display: flex;
+         flex-direction: column;
+       }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+           <span>Shopper.</span>
+        </div>
+        <div id="navi">
+            <nav>
+               <span>Home</span>
+               <span>Catalog</span>
+               <span>Shop</span>
+               <span>Pages</span>
+               <span> Blog</span>
+               <span>Docs</span>
+            </nav>
+        </div>
+         <div id="asd"> 
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart"></span>
+              
+         </div>
+    </header>
+    <article>
+        <span class="bi-lightning-fill"></span>
+        <span>HAPPY HOLIDAY DEALS ON EVERYTHING</span>
+        <span class="bi-lightning-fill"></span>
+    </article>
+    <section>
+        <div id="womenPanel">
+           <span class="txt">women</span>
+           <button>Shop Women &nbsp;&nbsp;<span class="bi bi-arrow-right"></span></button>
+        </div>
+    
+        
+        <div id="menPanel">
+          <span class="txt">Men</span>
+          <button>Shop Men &nbsp;&nbsp;<span class="bi bi-arrow-right"></span></button>
+        </div>
+
+        <div id="kidPanel">
+          <span class="txt">Kids</span>
+          <button>Shop Kids &nbsp;&nbsp;<span class="bi bi-arrow-right"></span></button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="fhead">
+            <h2>Want style Ideas and Treats?</h2>
+            <input type="email" placeholder="         Enter Email*" >
+            <button>Subscribe</button>
+        </div>
+
+        <div class="fbody">
+             <aside>
+                <h2>Shopper.</h2>
+                <span class="bi bi-facebook"></span>
+                &nbsp;
+                <span class="bi bi-youtube"></span>
+                &nbsp;
+                <span class="bi bi-twitter"></span>
+                &nbsp;
+                <span class="bi bi-instagram"></span>
+                &nbsp;
+                <span class="bi bi-github"></span>
+             </aside>
+
+             <div class="fcol">
+                <h4>SUPPORT</h4>
+                <span>Contact Us</span>
+                <span>FAQs</span>
+                <span>Size Guide</span>
+                <span>Shipping & Returns</span>
+             </div>
+
+             <div class="fcol">
+                <h4>SHOP</h4>
+                <span>Men's Shopping</span>
+                <span>Women's Shopping</span> 
+                <span>Kid's Shopping</span>
+                <span>Discounts</span>
+             </div>
+
+             <div class="fcol">
+                <h4>COMPANY</h4>
+                <span>Our Story</span>
+                <span>Careers</span>
+                <span>Terms & Conditions</span>
+                <span>Privacy & Cookie policy</span>
+             </div>
+
+             <div class="fcol">
+                <h4>CONTACT</h4>
+                <span>1-202-555-0105</span>
+                <span>1-202-555-0106</span>
+                <span>help@shopper.com</span>
+             </div>
+        </div>
+            
+    </footer>
+</body>
+</html>

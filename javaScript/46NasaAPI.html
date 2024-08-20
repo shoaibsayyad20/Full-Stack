@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA API</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function bodyload()
+        {
+            fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY")
+            .then(function(response){
+                return response.json(); 
+            })
+            .then(function(marsObject){
+                marsObject.photos.map(function(item){
+                    var tr = document.createElement("tr");
+                    var tdId = document.createElement("td");
+                    var tdCamera = document.createElement("td");
+                    var tdPreview = document.createElement("td");
+                    var tdRover = document.createElement("td");
+
+                    tdId.innerHTML = item.id;
+                    tdCamera.innerHTML = item.camera.name;
+                    tdPreview.innerHTML = `<a href=${item.img_src} target="_blank"><img width="200" height="200" src=${item.img_src}></a>`;
+                    tdRover.innerHTML = item.rover.name;
+
+                    tr.appendChild(tdId);
+                    tr.appendChild(tdCamera);
+                    tr.appendChild(tdPreview);
+                    tr.appendChild(tdRover);
+
+                    document.querySelector("tbody").appendChild(tr); 
+                })
+            })
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <h2>Mars Rover Photos</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Photo Id</th>
+                <th>Camera Full Name</th>
+                <th>Preview</th>
+                <th>Rover Name</th>
+            </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+    </table>
+</body>
+</html>
+
+

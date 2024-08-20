@@ -1,0 +1,103 @@
+<!--
+The CSS transform-style property is used to transform child elements to preserve the 3D transformations.
+The transform-style property is used to specify that the children of an element are positioned in 3D space
+or flattened with respect to the plane of the element. The preserve-3d property value on an element, 
+one can preserve the 3D transformations of its child element.
+
+The perspective property defines how far the object is away from the user. 
+So, a lower value will result in a more intensive 3D effect than a higher value.
+When defining the perspective property for an element, 
+it is the CHILD elements that get the perspective view, NOT the element itself.
+
+-->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cube 3D</title>
+  <style>
+     .cube:hover .cube_side:nth-of-type(1)
+     {
+       transform: translate3d(0, 0, 200px);
+       transition: 2s;
+     }
+     .cube:hover .cube_side:nth-of-type(2)
+     {
+        transform: translate3d(0, 0, -200px);
+        transition: 2s;
+     }
+    
+     .cube:hover .cube_side:nth-of-type(5)
+     {
+        transform:  rotateX(90deg) translate3d(0,0,-200px);
+        transition: 2s;
+     }
+     .cube:hover .cube_side:nth-of-type(6)
+     {
+        transform:  rotateX(90deg) translate3d(0,0,200px);
+        transition: 2s;
+     }
+     body
+     {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:100vh;
+        perspective: 800px;
+     }
+     .cube
+     {
+        height: 200px;
+        width: 200px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(-24deg) rotateY(-120deg);
+     }
+     .cube_side
+     {
+       height:100%;
+       width:100%;
+       background-color: hsla(0, 50%, 50%, 0.5);
+       border: 2px solid hsl(0,0%,10%);
+       position:absolute;
+     }
+     .cube_side:nth-of-type(1)
+     {
+        transform: translate3d(0, 0, 100px);
+     }
+     .cube_side:nth-of-type(2)
+     {
+        transform: translate3d(0, 0, -100px) rotateY(180deg);
+     }
+     .cube_side:nth-of-type(3)
+     {
+        transform: rotateY(90deg) translate3d(0, 0, -100px);
+     }
+     .cube_side:nth-of-type(4)
+     {
+        transform: rotateY(-90deg) translate3d(0, 0, -100px);
+     }
+     .cube_side:nth-of-type(5)
+     {
+        transform: rotateX(90deg) translate3d(0, 0, -100px);
+     }
+     .cube_side:nth-of-type(6)
+     {
+        transform: rotateX(-90deg) translate3d(0, 0, -100px);
+     }
+  </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="cube_side"> 1 </div>
+        <div class="cube_side"> 2 </div>
+        <div class="cube_side"> 3 </div>
+        <div class="cube_side"> 4 </div>
+        <div class="cube_side"> 5 </div>
+        <div class="cube_side"> 6 </div>
+    </div>
+</body>
+</html>
+

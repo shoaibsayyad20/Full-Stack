@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Type</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function VerifyStock()
+        {
+            var CheckBox = document.getElementById("stock");
+            var label = document.getElementById("lblStock");
+
+            if(CheckBox.checked)
+            {
+                label.innerHTML = "Available".fontcolor('green');
+            }
+            else
+            {
+                label.innerHTML ="Out Of Stock".fontcolor('red');
+            }
+        }
+        function SortClick()
+        {
+            sortIcon = document.getElementById("sortIcon");
+            sortIcon.className = ((sortIcon.className=="bi bi-sort-alpha-down")?"bi bi-sort-alpha-up" : "bi bi-sort-alpha-down");
+        }
+    </script>
+</head>
+<body>
+    <input type="checkbox" id="stock" onchange="VerifyStock()"> <span id="lblStock">Out Of Stock</span>
+    <br>
+    <button onclick="SortClick()">
+        <span id="sortIcon" class="bi bi-sort-alpha-down"></span>
+    </button>
+</body>
+</html>
+

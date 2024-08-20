@@ -1,0 +1,216 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Shopper</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        @media screen and (orientation:landscape)
+       {
+            
+            .topic
+            {
+                background-color: black;
+                color:white;
+                padding: 10px;
+                margin:10px;
+                text-align:center;
+            }
+            section
+            {
+                display: grid;
+                grid-template-columns: 4fr 4fr 4fr;
+                height:500px;
+                margin-top: 40px;
+            }
+            .women-panel
+            {
+                background-image:url(./assets/women.webp);
+                background-size: 100% 100%;
+                grid-row: 1;
+                grid-column: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:white;
+
+            }
+            .men-panel
+            {
+                background-image: url(./assets/men.webp);
+                background-size: 100% 100%;
+                grid-row: 1;
+                grid-column: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:white;
+            }
+            .kid-panel
+            {
+                background-image:url(./assets/kid.jpeg);
+                background-size: 100% 100%;
+                grid-row: 1;
+                grid-column: 3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:white;
+            }
+            button 
+            {
+                margin-top:380px;
+                position: absolute;
+                align-items: center;
+                border: 1px solid white;
+                padding: 10px;
+                width: 200px;
+
+            }
+           
+            .navbar-collapse
+            {
+                font-weight: bold;
+                font-family: Arial;
+                display: flex;
+                justify-content: space-around;
+            }
+       }
+       @media screen and (orientation:portrait)
+       {
+            .topic
+            {
+                background-color: black;
+                color:white;
+                text-align: center;
+                margin:20px 0px 20px 0px;
+            }
+            section
+            {
+                display: grid;
+                grid-template-columns: 12fr;
+                height:1200px;
+                
+            }
+            .women-panel
+            {
+                background-image:url(./assets/women.webp);
+                background-size: 100% 100%;
+                grid-row: 1;
+                grid-column: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:white;
+                margin: 10px 0px 10px 0px;
+            }
+            .men-panel
+            {
+                background-image: url(./assets/men.webp);
+                background-size: 100% 100%;
+                grid-row: 2;
+                grid-column: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:white;
+                margin: 10px 0px 10px 0px;
+            }
+            .kid-panel
+            {
+                background-image:url(./assets/kid.jpeg);
+                background-size: 100% 100%;
+                grid-row: 3;
+                grid-column: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:white;
+                margin: 10px 0px 10px 0px;
+            }
+            button 
+            {
+                margin-top:250px;
+                position: absolute;
+                align-items: center;
+                border: 1px solid white;
+                padding: 10px;
+                width: 150px;
+
+            }
+            .navbar-toggler
+            {
+                float:right;
+                width: 60px;
+            }
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid row">
+                <div class="navbar-brand col-3 text-center">
+                    <h2>Shopper.</h2>
+                </div>
+                <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menulist">
+                    <span class="navbar-toggler-icon"></span>
+                </div>
+
+                <div class="navbar-collapse collapse col-9" id="menulist">
+                        <ul class="navbar-nav fw-bold">
+                            <li class="nav-item pe-3"><a href="#" class="nav-link"> Home </a></li>
+                            <li class="nav-item pe-3"><a href="#" class="nav-link"> Catalog </a></li>
+                            <li class="nav-item pe-3"><a href="#" class="nav-link"> Shop </a></li>
+                            <li class="nav-item pe-3"><a href="#" class="nav-link"> Pages </a></li>
+                            <li class="nav-item pe-3"><a href="#" class="nav-link"> Blog </a></li>
+                            <li class="nav-item pe-3"><a href="#" class="nav-link"> Docs </a></li>
+                        </ul>
+    
+                        <div>
+                            <span class="bi bi-search pe-2"></span>
+                            <span class="bi bi-person pe-2"></span>
+                            <span class="bi bi-heart pe-2"></span>
+                            <span class="bi bi-cart pe-2"></span>
+                        </div>
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="topic">
+        <span>HAPPY HOLIDAY DEALS ON EVERYTHING</span>
+    </div>
+
+    <section>
+        <div class="women-panel">
+           <h2>Women</h2>
+           <button>
+            Shop Women <span class="bi bi-chevron-right"></span>
+           </button>
+        </div>
+        <div class="men-panel">
+            <h2>Men</h2>
+            <button>
+                Shop Men <span class="bi bi-chevron-right"></span>
+            </button>
+        </div>
+        <div class="kid-panel">
+            <h2>Kids</h2>
+            <button>
+                Shop Kids<span class="bi bi-chevron-right"></span>
+            </button>
+        </div>
+    </section>
+
+
+
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+
+</body>
+</html>

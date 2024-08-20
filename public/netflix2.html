@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <title>Netflix</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+   
+   
+       body
+       {
+         background-size: 100% 100%;
+         background-repeat: no-repeat;
+         background-color: rgba(0, 0, 0, 0.5);
+         
+       }
+       .form-select
+       {
+          width: 100px;
+          background-color: white;
+          color: black;
+          margin-right: 20px;
+       }
+       .header
+       {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         padding: 20px;
+         background-color: rgba(0, 0, 0, 0.7);
+       }
+       .container
+       {
+         
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 600px;
+          width: 1200px;
+          background-color: rgba(0, 0, 0, 0.7);
+          float: none;
+          overflow: hidden;
+        
+       }
+       .form-text
+       {
+         display: flex;
+         justify-content: space-between;
+        
+       }
+       h1,h4,h5
+       {
+         color: white;
+         text-decoration: solid;
+         
+       }
+       p
+       {
+         display: flex;
+         justify-content: center;
+       }
+       .form-control
+       {
+         width:400px;
+       }
+    </style>
+</head>
+<body background="./assets/netflixback.jpg">
+    <div class="header">
+      <font color="red">
+      <font size="6">N</font>
+      <font size="6">E</font>
+      <font size="6">T</font>
+      <font size="6">F</font>
+      <font size="6">L</font>
+      <font size="6">I</font>
+      <font size="6">X</font>
+      </font>
+       
+      <form class="form-text form-text-lg">
+       <select name="language" class="form-select">
+          <option value="Eng" selected>English</option>
+          <option value="Hindi">हिंदी</option>
+       </select>
+
+       <button class="btn btn-danger">Sign In</button>
+       </form>
+    </div>
+
+    <div class="container">
+
+        <div class="main-content">
+        <h1>The biggest Indian hits. The best Indian stories. All streaming here.</h1>
+        <br>
+        <h4>Watch anywhere. Cancel anytime.</h4>
+        <br><br>
+        <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
+        <br>
+        
+        <P>
+        <input type="email" placeholder="Email address" class="form-control">
+        <button class="btn btn-danger">
+          Get Started <span class="bi bi-chevron-right"></span>
+         </button>
+         </P>
+    </div>
+
+
+  
+    
+</body>
+</html>

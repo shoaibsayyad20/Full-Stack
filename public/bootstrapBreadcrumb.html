@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <ul class="mt-3 breadcrumb">
+        <li class="breadcrumb-item">Flipkart</li>
+        <li class="breadcrumb-item">Electronics</li>
+        <li class="breadcrumb-item">Mobiles</li>
+        <li class="breadcrumb-item">Apple</li>
+        <li class="breadcrumb-item active">iPhone 15</li>
+    </ul>
+    <ul class="mt-4 nav nav-tabs">
+        <li class="nav-item"> <a href="#basic" data-bs-toggle="tab" class="nav-link active">Basic Details</a> </li>
+        <li class="nav-item"> <a href="#preview" data-bs-toggle="tab" class="nav-link">Preview</a> </li>
+        <li class="nav-item"> <a href="#reviews" data-bs-toggle="tab" class="nav-link">Reviews</a> </li>
+        <li class="nav-item"> <a href="#offers" data-bs-toggle="tab" class="nav-link">Offers</a></li>
+    </ul>
+    <div class="mt-4 tab-content">
+        <div class="tab-pane active" id="basic">
+            <div class="h3"> Apple iPhone 15 (Black, 128 GB) </div>
+            <div class="my-3"> <span class="fw-bold fs-5">₹70,999</span> <strike>₹79,900</strike> 11% off </div>
+        </div>
+        <div class="tab-pane" id="preview">
+            <img src="./assets/iphone.jpg" width="300" height="500">
+        </div>
+        <div class="tab-pane" id="reviews">
+            <span class="badge bg-success rounded p-2"> 4.6 <span class="bi bi-star-fill"></span> </span> <span class="text-secondary"> 4500 ratings & 2000 reviews </span>
+        </div>
+        <div class="tab-pane" id="offers">
+            <ul class="list-unstyled">
+                <li class="bi bi-tag-fill text-success"> <span class="text-secondary">Bank Offer5% Cashback on Flipkart Axis Bank CardT&C</span> </li>
+                <li class="bi bi-tag-fill text-success"> <span class="text-secondary">Bank Offer₹1000 off on UPI TransactionsT&C</span> </li>
+                <li class="bi bi-tag-fill text-success"> <span class="text-secondary">Bank Offer₹4000 Off On ICICI Bank Credit Non EMI, Credit and Debit Card EMI TransactionsT&C</span> </li>
+                <li class="bi bi-tag-fill text-success"> <span class="text-secondary">Special PriceGet extra ₹8901 off (price inclusive of cashback/coupon)T&C</span> </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

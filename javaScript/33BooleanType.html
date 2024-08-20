@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Type</title>
+    <script>
+        function VerifyName()
+        {
+            var user = document.getElementById("UserName");
+            var btn = document.getElementById("btnSubmit");
+
+            if(user.value=="")
+            {
+                btn.disabled = true;
+                user.style.border = "1px solid red";
+            }
+            else
+            {
+                btn.disabled = false;
+                user.style.border = "1px solid green";
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" onblur="VerifyName()" id="UserName"></dd>
+    </dl>
+    <button id="btnSubmit">Submit</button>
+</body>
+</html>

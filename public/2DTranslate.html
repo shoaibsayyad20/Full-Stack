@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   
+        img {
+            position: absolute;
+        }
+
+        .pic {
+            opacity: 0.4;
+        }
+
+        .pic-copy {
+        
+            transform: translate(0px, 0px);
+            -webkit-transform: translate(0px, 0px);
+            -moz-transform: translate(0px, 0px);
+            -o-transform: translate(0px, 0px);
+            -ms-transform: translate(0px, 0px);
+            transition: 5s;
+        }
+
+        .pic-copy:hover {
+            opacity: 1;
+            transform: translate(50px,50px);
+            -webkit-transform: translate(50px,50px) ;
+            -moz-transform: translate(50px, 50px);
+            -o-transform: translate(50px, 50px);
+            -ms-transform: translate(50px, 50px);
+            transition: 2s;
+        }
+        .img
+        {
+            border: 2px solid black;
+            height: 400px;
+            width: 400px;
+        }
+        .box    
+        {
+            background-color:tomato;
+            width:200px;
+            height: 200px;
+            margin-top: 20px;
+            border: 2px solid black;
+            color: white;
+            text-align:center;
+            font-family: Arial;
+            font-size: 20px;
+            
+        }
+        .box:hover
+        {
+            transform:translateX(100px);
+            -webkit-transform:translateX(100px);
+            transition: 2s
+        }
+        .box1    
+        {
+            background-color:rgb(78, 146, 78);
+            width:200px;
+            height: 200px;
+            margin-top: 20px;
+            border: 2px solid black;
+            color: white;
+            text-align:center;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        .box1:hover
+        {
+            transform:translateY(100px);
+            -webkit-transform:translateY(100px);
+            transition: 2s
+        }
+        .box2    
+        {
+            background-color:rgb(148, 116, 116);
+            width:200px;
+            height: 200px;
+            margin-top: 20px;
+            border: 2px solid black;
+            color: white;
+            text-align:center;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        .box2:hover
+        {
+            transform:translate(100px,100px);
+            -webkit-transform:translate(100px,100px);
+            transition: 2s
+        }
+        .parent
+        {
+            display:flex;
+            justify-content: space-evenly;
+            border: 2px solid gray;
+            height: 400px;
+            margin-top: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+     <div class="img">
+        <img class="pic" src="./assets/women.webp" width="200" height="300">
+        <img class="pic-copy" src="./assets/men.webp" width="200" height="300">
+     </div>
+
+     
+    <div class="parent">
+        <div class="box">
+            Translate in x-direction
+        </div>
+        <div class="box1">
+            Translate in y-direction
+        </div>
+        <div class="box2">
+            Translate in both direction
+        </div>
+    </div>
+</body>
+</html>
+

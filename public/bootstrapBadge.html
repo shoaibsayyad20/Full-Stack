@@ -1,0 +1,31 @@
+<!--
+1. only badge class is available and other old classes are applied following
+2. badge-pill           : Using border and rounded
+3. badge-primary,danger : Using bg-color
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Badge</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid m-4">
+     <h2>Badge</h2>
+     <button class="btn btn-primary">
+           <span class="bi bi-bell"></span>
+           <span>Notifications</span>
+           <span class="badge bg-dark rounded rounded-circle">5</span>
+     </button>
+
+     <button class="position-relative btn btn-primary">
+        <span class="bi bi-bell"></span>
+        <span>Message</span>
+        <span class="badge bg-danger position-absolute"> 3 </span>
+
+    </button>
+
+    
+</body>
+</html>

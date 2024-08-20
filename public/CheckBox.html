@@ -1,0 +1,56 @@
+<!--
+    1. Even after applying mutex we can check multiple option at a time.
+-->
+<html lang="en">
+<head>
+    <title>Check Box</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        div
+        {
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<form>
+   <fieldset>
+    <legend>select courses</legend>
+    <div>
+        <input type="checkbox" name="option" value="Select" checked>Select
+        <br>
+        <input type="checkbox" name="course" value="java">Java
+        <br>
+        <input type="checkbox" name="course" value="CPP">CPP
+        <br>
+        <input type="checkbox" name="course" value="Python">Python
+        <br>
+        <input type="checkbox" name="course" value="Oracle">Oracle
+        <br>
+        <button>Submit</button>
+    </div>
+   </fieldset>
+     <br><br>
+     
+   <fieldset>
+    <legend>select courses</legend>
+    <div class="form-switch">
+        <input type="checkbox" name="option" value="Select" checked class="form-check-input">Select
+        <br>
+        <input type="checkbox" name="course" value="java" class="form-check-input">Java
+        <br>
+        <input type="checkbox" name="course" value="CPP" class="form-check-input">CPP
+        <br>
+        <input type="checkbox" name="course" value="Python" class="form-check-input">Python
+        <br>
+        <input type="checkbox" name="course" value="Oracle" class="form-check-input">Oracle
+        <br>
+        <button>Submit</button>
+    </div>
+   </fieldset>
+
+</form>
+    
+</body>
+</html>
